@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AddmultipleChoiceQuestionScreenController">
+   <children>
+      <Label layoutX="171.0" layoutY="30.0" text="Add New Question!" textFill="#0026ff">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="69.0" text="MultipleChoiceQuestion" textFill="RED" />
+      <Label layoutX="93.0" layoutY="125.0" text="Question : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="170.0" text="Mark : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="213.0" text="Answer No 1 : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="255.0" text="Answer NO 2 : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="294.0" text="Answer NO 3 :  ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="ADd" layoutY="478.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="31.0" prefWidth="576.0" text="ADD" />
+      <Button fx:id="OnBackClick" layoutX="14.0" layoutY="516.0" mnemonicParsing="false" onAction="#onBackClick" text="Back" />
+      <TextField fx:id="tf_Question" layoutX="219.0" layoutY="125.0" />
+      <TextField fx:id="tf_mark" layoutX="219.0" layoutY="169.0" />
+      <TextField fx:id="tf_AnwerNO1" disable="true" layoutX="218.0" layoutY="212.0" />
+      <TextField fx:id="tf_AnwerNO2" disable="true" layoutX="218.0" layoutY="254.0" />
+      <TextField fx:id="tf_AnwerNO3" disable="true" layoutX="219.0" layoutY="293.0" />
+      <Label layoutX="64.0" layoutY="435.0" text="True Answer : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="TrueAnserCH" layoutX="237.0" layoutY="435.0" onMouseClicked="#showAnswers" onMouseDragged="#showAnswers1" onMouseEntered="#showAnswers2" prefWidth="150.0" />
+      <Label layoutX="64.0" layoutY="342.0" text="Answer NO 4 : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="386.0" text="Answer NO 5 : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_AnwerNO4" disable="true" layoutX="219.0" layoutY="342.0" />
+      <TextField fx:id="tf_AnwerNO5" disable="true" layoutX="218.0" layoutY="385.0" />
+      <CheckBox fx:id="ch_an1" layoutX="422.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#selested1" />
+      <CheckBox fx:id="ch_an2" layoutX="422.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#selested2" />
+      <CheckBox fx:id="ch_an3" layoutX="422.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#selested3" />
+      <CheckBox fx:id="ch_an4" layoutX="422.0" layoutY="347.0" mnemonicParsing="false" onMouseClicked="#selested4" />
+      <CheckBox fx:id="ch_an5" layoutX="422.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#selested5" />
+      <Label fx:id="text" layoutX="253.0" layoutY="533.0" prefHeight="17.0" prefWidth="76.0" />
+   </children>
+</AnchorPane>

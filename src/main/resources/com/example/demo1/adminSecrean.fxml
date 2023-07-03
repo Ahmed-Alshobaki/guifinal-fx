@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="478.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AdminSecreanController">
+   <children>
+      <Label fx:id="Welcomelbl" alignment="CENTER" layoutX="137.0" layoutY="41.0" prefHeight="80.0" prefWidth="256.0" textFill="RED">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_ViewAllTeacher" layoutX="73.0" layoutY="329.0" mnemonicParsing="false" onAction="#ViewAllTeacher" text="View All Teacher">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_AddTeacher" layoutX="73.0" layoutY="211.0" mnemonicParsing="false" onAction="#addTeacher" prefHeight="38.0" prefWidth="148.0" text="Add Teacher">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="319.0" layoutY="211.0" mnemonicParsing="false" onAction="#btn_addStudent" prefHeight="38.0" prefWidth="148.0" text="Add Student">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="319.0" layoutY="329.0" mnemonicParsing="false" onAction="#btn_ViewAllStudent" prefHeight="38.0" prefWidth="148.0" text="View All Student" />
+      <Button fx:id="backButton" layoutX="23.0" layoutY="409.0" mnemonicParsing="false" onAction="#onClickBack" text="Back" />
+   </children>
+</AnchorPane>

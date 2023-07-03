@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="599.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.StedntScreenController">
+   <children>
+      <Label fx:id="lbl_welcome" alignment="CENTER" layoutX="165.0" layoutY="69.0" prefHeight="71.0" prefWidth="253.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="SolveExam" layoutX="227.0" layoutY="218.0" mnemonicParsing="false" onAction="#Solve" text="Solve Exam">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="Edit_Information" layoutX="205.0" layoutY="278.0" mnemonicParsing="false" onAction="#Edit_Information" text="Edit Information">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="40.0" layoutY="507.0" mnemonicParsing="false" onAction="#onBackClickk" text="Back" />
+      <Button fx:id="examResultsE" layoutX="202.0" layoutY="339.0" mnemonicParsing="false" onAction="#examResultsE" prefHeight="44.0" prefWidth="179.0" text="examResultsE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

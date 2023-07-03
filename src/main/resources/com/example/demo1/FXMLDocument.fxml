@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.FXMLDocumentController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="208.0" fitWidth="216.0" layoutX="70.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@ig/a.png" />
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+
+            <TextField fx:id="user_name" layoutX="101.0" layoutY="199.0" promptText="User name" style="-fx-background-color: tarnsparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="password_id" layoutX="101.0" layoutY="250.0" promptText="password" style="-fx-background-color: tarnsparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="id_Login" layoutX="127.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE" />
+            <Label layoutX="68.0" layoutY="109.0" style="-fx-alignment: #0598ff;" text="School Administration" textFill="#0598ff">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="wornglbl" layoutX="107.0" layoutY="355.0" prefHeight="17.0" prefWidth="124.0" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
