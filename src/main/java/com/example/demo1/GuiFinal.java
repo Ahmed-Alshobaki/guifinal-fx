@@ -78,6 +78,8 @@ public class GuiFinal extends Application {
         Util.exam.setQuestions(list);
         Util.exam.setExamQuestions(list);
 
+
+
         Util.setExam(exam);
         Student student =new Student();
         Teacher teacher =new Teacher();

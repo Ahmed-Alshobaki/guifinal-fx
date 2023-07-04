@@ -23,6 +23,12 @@ public class StedntScreenController implements Initializable {
     private Label lbl_welcome;
     @FXML
     private Button examResultsE;
+    @FXML
+    private Button SolveExam;
+    @FXML
+    private Button Edit_Information;
+    @FXML
+    private Button examResultsdetails;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -59,8 +65,25 @@ Student stud ;
         stage.show();
     }
 
-    public void Edit_Information(ActionEvent actionEvent) throws IOException {
 
+
+
+
+    @FXML
+    public void Solve(ActionEvent actionEvent) throws IOException {
+
+        Student s = new Student ();
+        Node node = (Node)actionEvent.getSource() ;
+        Stage stage  = (Stage)node.getScene().getWindow() ;
+        stage.close();
+        FXMLLoader loader = new  FXMLLoader(getClass().getResource("SolveExamPage.fxml"));
+        Parent root = loader.load();
+        stage.setScene( new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    public void Edit_Information(ActionEvent actionEvent) throws IOException {
         Node node = (Node)actionEvent.getSource() ;
         Stage stage  = (Stage)node.getScene().getWindow() ;
         stage.close();
@@ -72,14 +95,14 @@ Student stud ;
         stage.show();
     }
 
-    public void Solve(ActionEvent actionEvent) throws IOException {
-
-        Student s = new Student ();
+    @FXML
+    public void examResultsdetails(ActionEvent actionEvent) throws IOException {
         Node node = (Node)actionEvent.getSource() ;
         Stage stage  = (Stage)node.getScene().getWindow() ;
         stage.close();
-        FXMLLoader loader = new  FXMLLoader(getClass().getResource("SolveExamPage.fxml"));
+        FXMLLoader loader = new  FXMLLoader(getClass().getResource("exam_result_details.fxml"));
         Parent root = loader.load();
+
         stage.setScene( new Scene(root));
         stage.show();
     }

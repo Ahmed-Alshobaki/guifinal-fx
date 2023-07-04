@@ -34,6 +34,8 @@ public class AddExamScreenController implements Initializable {
     @FXML
     private CheckBox ftb;
     int a;
+    String str ="" ;
+    int totel =0;
 
     public static ArrayList<Question> questionOfExam = new ArrayList <>() ;
     @Override
@@ -73,10 +75,17 @@ public class AddExamScreenController implements Initializable {
 
 
                  questionOfExam.add(Util.allQuestionsList.get(random));
-                  exam.setExamQuestions(questionOfExam);
+                //-  exam.setExamQuestions(questionOfExam);
+
                   Util.exam.setQuestions(questionOfExam);
-                  Util.exam.setExamQuestions(Util.allQuestionsList);
+                  Util.exam.setExam_result_details("\n"+questionOfExam.get(random).toString());
                   Util.questionOfExam.add(Util.allQuestionsList.get(random));
+                  str = str + ("\n" + questionOfExam.get(i).getQuestion()+"-----"+ questionOfExam.get(i).getAnswer());
+                  System.out.println(str);
+                  totel+=Util.questionOfExam.get(random).getMarks();
+
+
+
 
 
              
@@ -84,10 +93,17 @@ public class AddExamScreenController implements Initializable {
 
 
          }
-         exam.setFullMark(6);
+       // exams
 
+      //--  Util.exam.setExamQuestions(Util.questionOfExam);
         exam.setTotalMarks(a);
+         exam.setTotalMarks(totel);
+         exam.setFullMark(6);
+        exam.setExam_result_details(str);
+
         Util.exams.add(exam);
+        Util.exam.setTotalMarks(totel);
+        Util.exam.setExam_result_details(str);
 
         Util.setExam(exam);
 

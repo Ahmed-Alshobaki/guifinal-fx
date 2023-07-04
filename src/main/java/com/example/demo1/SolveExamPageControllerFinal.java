@@ -47,7 +47,7 @@ public class SolveExamPageControllerFinal implements Initializable {
     int StudentId;
     int temp = 0;
     @FXML
-    private Label aa;
+    private Label numOfQ;
 
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -101,6 +101,7 @@ public class SolveExamPageControllerFinal implements Initializable {
             if (this.counter == 2) {
                 this.btn_submit.setText("Submit");
                 this.lbl_questionText.setText((this.exam.getExamQuestions().get(this.indexCounter)).getQuestion());
+                numOfQ.setText(this.indexCounter++ +"");
                 if (this.indexCounter == this.exam.getExamQuestions().size() - 1) {
                     this.btn_submit.setText("Finish");
                 }
@@ -141,6 +142,7 @@ public class SolveExamPageControllerFinal implements Initializable {
                 ++this.indexCounter;
 
             } else {
+                //خ
                 if (this.indexCounter == this.exam.getExamQuestions().size() + 1) {
                     this.btn_submit.setText("Finish");
                     this.temp = this.exam.getExamQuestions().size();
@@ -181,6 +183,9 @@ public class SolveExamPageControllerFinal implements Initializable {
                     if (this.indexCounter == this.exam.getExamQuestions().size()) {
                         this.btn_submit.setText("Finish");
                     }
+
+                    numOfQ.setText(this.indexCounter+"");
+
 
                     if ((this.exam.getExamQuestions().get(this.indexCounter-1)).getType().equals("Fill The Blank")) {
                         this.tf_fillAnswer.setVisible(true);
@@ -252,10 +257,11 @@ public class SolveExamPageControllerFinal implements Initializable {
 
                 try {
                     String answer = "";
+                    // القبل
                     if ((this.exam.getExamQuestions().get(this.indexCounter - 1)).getType().equals("Fill The Blank")) {
                         answer = this.tf_fillAnswer.getText();
                         this.answers.add(answer);
-                        aa.setText(answer);
+
                         if ((this.exam.getExamQuestions().get(this.indexCounter - 1)).checkAnswer(answer)) {
                             System.out.println("iiiii" + this.indexCounter);
                             this.gettenMark += (this.exam.getExamQuestions().get(this.indexCounter - 1)).getMarks();

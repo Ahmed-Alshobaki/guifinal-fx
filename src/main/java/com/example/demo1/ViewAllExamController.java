@@ -69,7 +69,7 @@ public class ViewAllExamController implements Initializable {
               col2.setCellValueFactory(new PropertyValueFactory<Exam, String>("name"));
               col3.setCellValueFactory(new PropertyValueFactory<Exam, Integer>("numberOfQuestion"));
                col4.setCellValueFactory(new PropertyValueFactory<Exam, Integer>("minPassAverage"));
-                col5.setCellValueFactory(new PropertyValueFactory<Exam, Integer>("totalMarks"));
+                col5.setCellValueFactory(new PropertyValueFactory<Exam, Integer>("fullMark"));
                taple_exam.setItems(e);
     }
 

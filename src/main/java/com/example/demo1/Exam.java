@@ -16,6 +16,16 @@ public class Exam {
     private ArrayList<Question> examQuestions =new ArrayList<>();
     private String allQuestions;
     private int fullMark;
+
+    public String getExam_result_details() {
+        return exam_result_details;
+    }
+
+    public void setExam_result_details(String exam_result_details) {
+        this.exam_result_details = exam_result_details;
+    }
+
+    private  String exam_result_details ;
     private ArrayList<String> examResultsE = new ArrayList();
     private ArrayList <String> allowedQuestionsType = new  ArrayList <>();
 

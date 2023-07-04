@@ -3,7 +3,6 @@ package com.example.demo1;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -20,21 +19,21 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class examResultsE implements Initializable  {
-    @javafx.fxml.FXML
-    private TableColumn<Exam, String> name;
-    @javafx.fxml.FXML
-    private TableColumn<Exam, Integer> minPassAverage;
-    @javafx.fxml.FXML
-    private TableColumn  <Exam,Integer>fullMark;
-    @javafx.fxml.FXML
-    private Button back;
-    @javafx.fxml.FXML
-    private TableView<Exam> er;
     ObservableList<Exam> eET ;
     @javafx.fxml.FXML
-    private TableColumn<Exam,Integer> totalMarks;
+    private TableView er;
     @javafx.fxml.FXML
-    private TableColumn<Exam,Integer> id;
+    private TableColumn id;
+    @javafx.fxml.FXML
+    private TableColumn name;
+    @javafx.fxml.FXML
+    private TableColumn minPassAverage;
+    @javafx.fxml.FXML
+    private TableColumn fullMark;
+    @javafx.fxml.FXML
+    private TableColumn totalMarks;
+    @javafx.fxml.FXML
+    private Button back;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,7 +47,7 @@ public class examResultsE implements Initializable  {
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void back(ActionEvent actionEvent) throws IOException {
         Node node = (Node)actionEvent.getSource() ;
         Stage stage  = (Stage)node.getScene().getWindow() ;
@@ -61,8 +60,6 @@ public class examResultsE implements Initializable  {
         stage.show();
     }
 
-    @javafx.fxml.FXML
-    public void er(Event event) {
 
-    }
+
 }
